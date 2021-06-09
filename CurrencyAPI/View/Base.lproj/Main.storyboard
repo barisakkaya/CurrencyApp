@@ -46,29 +46,36 @@
                                     <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="currencyCell" id="gsu-dZ-roK">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="currencyCell" id="gsu-dZ-roK" customClass="CurrencyCollectionViewCell" customModule="CurrencyAPI" customModuleProvider="target">
                                         <rect key="frame" x="10" y="10" width="186" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="mvo-Wb-hpu">
                                             <rect key="frame" x="0.0" y="0.0" width="186" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Label Label Label Label Label Label Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8b-xl-6P0">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Label Label Label Label Label Label Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8b-xl-6P0">
                                                     <rect key="frame" x="0.0" y="0.0" width="186" height="128"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="d8b-xl-6P0" firstAttribute="top" secondItem="mvo-Wb-hpu" secondAttribute="top" id="CyJ-d0-mOm"/>
+                                                <constraint firstAttribute="trailing" secondItem="d8b-xl-6P0" secondAttribute="trailing" id="I0e-rv-l9m"/>
                                                 <constraint firstItem="d8b-xl-6P0" firstAttribute="centerX" secondItem="mvo-Wb-hpu" secondAttribute="centerX" id="Jl2-VU-HIO"/>
                                                 <constraint firstAttribute="trailing" secondItem="d8b-xl-6P0" secondAttribute="trailing" id="OVE-bM-QrQ"/>
                                                 <constraint firstItem="d8b-xl-6P0" firstAttribute="top" secondItem="mvo-Wb-hpu" secondAttribute="top" id="QXX-UQ-eSi"/>
                                                 <constraint firstAttribute="bottom" secondItem="d8b-xl-6P0" secondAttribute="bottom" id="Qf6-Fv-vwS"/>
+                                                <constraint firstItem="d8b-xl-6P0" firstAttribute="leading" secondItem="mvo-Wb-hpu" secondAttribute="leading" id="e1y-ts-9b5"/>
                                                 <constraint firstItem="d8b-xl-6P0" firstAttribute="leading" secondItem="mvo-Wb-hpu" secondAttribute="leading" id="pxO-j1-gFz"/>
+                                                <constraint firstAttribute="bottom" secondItem="d8b-xl-6P0" secondAttribute="bottom" id="xZ9-i9-py3"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="186" height="128"/>
+                                        <connections>
+                                            <outlet property="labelCell" destination="d8b-xl-6P0" id="Cry-UV-s5I"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -86,6 +93,9 @@
                             <constraint firstItem="y9Y-zm-7Se" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yXk-cq-G7t"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="currencyCollectionView" destination="y9Y-zm-7Se" id="LR2-3H-UZS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
